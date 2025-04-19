@@ -1,4 +1,4 @@
--- Create G
+-- Create GUI
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "TeleportGUI"
 ScreenGui.ResetOnSpawn = false
@@ -72,7 +72,7 @@ StartButton.TextSize = 16
 StartButton.Parent = InnerFrame
 Instance.new("UICorner", StartButton)
 
--- Teleport Skull Button (Direct)
+-- Teleport Skull Button (updated)
 local SkullButton = Instance.new("TextButton")
 SkullButton.Size = UDim2.new(0.8, 0, 0, 30)
 SkullButton.Position = UDim2.new(0.1, 0, 0.65, 0)
@@ -132,8 +132,8 @@ StartButton.MouseButton1Click:Connect(function()
 	rootPart.CFrame = workspace.Map.Plates.Large:GetChildren()[218].CFrame
 end)
 
--- Teleport to Skull (Terrain[6] > [23])
+-- Teleport to Skull (updated to Terrain[2] > [90])
 SkullButton.MouseButton1Click:Connect(function()
 	local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-	rootPart.CFrame = workspace.Map.Structural.Terrain:GetChildren()[6]:GetChildren()[23].CFrame
+	rootPart.CFrame = workspace.Map.Structural.Terrain:GetChildren()[2]:GetChildren()[90].CFrame
 end)
